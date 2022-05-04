@@ -1,9 +1,12 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
 
-/* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
-});
+const coursesController = require("./handler/courses");
+
+router.post("/", coursesController.create);
+router.put("/:id", coursesController.update);
+router.delete("/:id", coursesController.destroy);
+router.get("/:id", coursesController.get);
+router.get("/", coursesController.getAll);
 
 module.exports = router;
