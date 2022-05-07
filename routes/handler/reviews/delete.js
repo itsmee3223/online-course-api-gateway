@@ -1,7 +1,7 @@
 const apiAdapter = require("../../apiAdapter");
 const { URL_SERVICE_COURSE } = process.env;
 
-const api = apiadapter(URL_SERVICE_COURSE);
+const api = apiAdapter(URL_SERVICE_COURSE);
 
 module.exports = async (req, res, next) => {
   try {
