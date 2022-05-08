@@ -4,7 +4,7 @@ module.exports = (...roles) => {
     if (!roles.includes(role)) {
       return res.status(405).json({
         status: "error",
-        message: "you don't have permission to",
+        message: "you don't have permission",
       });
     }
     return next();

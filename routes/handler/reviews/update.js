@@ -3,14 +3,11 @@ const { URL_SERVICE_COURSE } = process.env;
 
 const api = apiAdapter(URL_SERVICE_COURSE);
 
-module.exports = async (req, res, next) => {
+module.exports = async (req, res) => {
   try {
-    const { id } = req.params;
+    const id = req.params.id;
 
-    const review = await api.put(`/api/reviews/${id}`, {
-      ...req.body,
-    });
-
+    const review = await api.put(`/api/reviews/${id}`, req.body);
     return res.json(review.data);
   } catch (error) {
     if (error.code === "ECONNREFUSED") {
