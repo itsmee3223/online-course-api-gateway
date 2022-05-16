@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   try {
     const courses = await api.get("/api/courses", {
       params: {
-        ...req.query,
+        q: req.query,
         status: "published",
       },
     });
