@@ -6,7 +6,7 @@ Website Kelas Online
 I bought a course from BWA and learn how to build microservice web.
 </p>
 <p align='center'>
-This is the API gateway, build with ExpressJS, and deployed with <a href='https://vercel.com/ target='_blank'>Railway</a>
+This is the API gateway, build with ExpressJS, and deployed with <a href='https://railway.app/' target='_blank'>Railway</a>
 </p>
 
 ---
